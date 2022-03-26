@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(255, 235, 239);
+        padding: 100px 200px;
+        border: 10px solid rgb(255, 76, 106);
+
+    }
+    #time,#para{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 80px;
+    }
+    #date{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="para">Time dekh behn ke lund</div> 
+        <div id="con">
+            <div id="time"></div> 
+            <span id="date"></span> 
+        </div>
+    </div>
+    <script>
+        // console.log("helo");
+        // let dt=new Date();
+        // let d=new Date(0); refern=ence date
+        function time(){
+            let dat=new Date();
+            let m=dat.getSeconds();
+            let n=dat.getMinutes();
+            let o=dat.getHours();
+            let b=dat.getDate();
+            let c=dat.getMonth();
+            let d=dat.getYear();
+            console.log(o+":"+n+':'+m);
+            let x=document.getElementById("time");
+            let y=document.getElementById("date");
+            x.innerHTML=o+" : "+n+' : '+m;
+            y.innerHTML=b+'/'+(c+1)+'/'+(d+1900);
+
+        }
+        setInterval(time, 1000);
+    </script>
+</body>
+</html>
