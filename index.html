@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>padhai kr BSDK</title>
+    <title>digital clock</title>
 </head>
 <style>
     .container{
@@ -37,16 +37,12 @@
 </style>
 <body>
     <div class="container">
-        <div id="para">Time dekh behn ke lund</div> 
         <div id="con">
             <div id="time"></div> 
             <span id="date"></span> 
         </div>
     </div>
     <script>
-        // console.log("helo");
-        // let dt=new Date();
-        // let d=new Date(0); refern=ence date
         function time(){
             let dat=new Date();
             let m=dat.getSeconds();
@@ -55,7 +51,6 @@
             let b=dat.getDate();
             let c=dat.getMonth();
             let d=dat.getYear();
-            console.log(o+":"+n+':'+m);
             let x=document.getElementById("time");
             let y=document.getElementById("date");
             x.innerHTML=o+" : "+n+' : '+m;
