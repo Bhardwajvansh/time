@@ -23,7 +23,11 @@
         background-color: rgb(255, 235, 239);
         padding: 100px 200px;
         border: 10px solid rgb(255, 76, 106);
-
+    }
+    #text {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     #time,#para{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -32,12 +36,38 @@
     #date{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 20px;
+    }
 
+    @media only screen and (max-width: 600px) {
+        #con {
+            padding: 50px 70px;
+        }
+
+        #text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #time {
+            font-size: 40px;
+        }
+
+        #date {
+            font-size: 14px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            #time {
+                font-size: 30px;
+            }
+        }
     }
 </style>
 <body>
     <div class="container">
         <div id="con">
+            <div id="text">Time Dekh!!!</div>
+            <div id="text">Padhai Karle Madarchod</div>
             <div id="time"></div> 
             <span id="date"></span> 
         </div>
